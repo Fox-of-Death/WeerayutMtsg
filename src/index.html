@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | NVC</title>
+        <link href="./output.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="min-h-screen flex flex-col">
+            <!-- เมนูหลัก (Navbar) -->
+            <nav class="shadow-lg p-0 sticky top-0 z-50">
+                <div class="bg-white container max-w-screen-xl mx-auto py-6">
+                    <a href="./index.html" class="flex items-center">
+                        <img src="https://nc.ac.th/nvc/wp-content/uploads/2023/07/logo6.png"
+                            alt="วิทยาลัยอาชีวศึกษานครปฐม" class="h-16 w-auto" />
+                    </a>
+                </div>
+                <div class="bg-blue-800 mx-auto flex justify-center">
+                    <ul class="flex space-x-6 text-white py-4">
+                        <li><a href="./index.html" class="hover:text-gray-400">หน้าแรก</a></li>
+                        <li><a href="./Executive/Executive_information.html"
+                                class="hover:text-gray-400">ข้อมูลผู้บริหาร</a></li>
+                        <li><a href="./Personnel/Personnel_information.html"
+                                class="hover:text-gray-400">ข้อมูลบุคลากร</a></li>
+                        <li><a href="./Student/" class="hover:text-gray-400">ข้อมูลนักเรียน</a></li>
+                        <li><a href="./Major/Major_Information.html"
+                                class="hover:text-gray-400">ข้อมูลสาขาวิชาที่เปิดสอน</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- เนื้อหาหลัก -->
+            <!-- Carousel Container -->
+            <div class="relative w-150 max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg my-5">
+                <!-- Carousel Container -->
+                <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                    <div class="w-full flex-shrink-0">
+                        <img src="../img/carousel/01.jpg" alt="Slide 1" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <img src="../img/carousel/02.jpg" alt="Slide 2" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <img src="../img/carousel/03.jpg" alt="Slide 3" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <img src="../img/carousel/04.jpg" alt="Slide 4" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <img src="../img/carousel/05.jpg" alt="Slide 5" class="w-full h-full object-contain">
+                    </div>
+                </div>
+                <!-- Navigation Dots (Indicators) -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <button class="indicator w-4 h-1 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition duration-300" onclick="showSlide(0)"></button>
+                    <button class="indicator w-4 h-1 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition duration-300" onclick="showSlide(1)"></button>
+                    <button class="indicator w-4 h-1 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition duration-300" onclick="showSlide(2)"></button>
+                    <button class="indicator w-4 h-1 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition duration-300" onclick="showSlide(3)"></button>
+                    <button class="indicator w-4 h-1 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition duration-300" onclick="showSlide(4)"></button>
+                </div>
+                <!-- Navigation Buttons (Next and Previous) -->
+                <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-100 p-2 rounded-full transition duration-300" onclick="prevSlide()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-100 p-2 rounded-full transition duration-300" onclick="nextSlide()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="container mx-auto p-4 max-w-screen-lg">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">วิดีโอแนะนำ</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center">
+                    <div class="w-full max-w-md rounded-2xl overflow-hidden shadow-lg bg-white">
+                        <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/3tY0orRkRpA"
+                            title="VTR-V.1-แนะนำวิทยาลัยอาชีวศึกษานครปฐม 2567" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="w-full max-w-md rounded-2xl overflow-hidden shadow-lg bg-white">
+                        <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/csdRvhhUdnE"
+                            title="Check In NVC v.1" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <footer class="bg-blue-900 text-white py-6 mt-auto">
+                <div class="container mx-auto text-center">
+                    <p class="text-sm">© 2023 วิทยาลัยอาชีวศึกษานครปฐม. สงวนลิขสิทธิ์.</p>
+                    <ul class="flex justify-center space-x-6 mt-4">
+                        <li><a href="#" class="hover:text-blue-400">เกี่ยวกับเรา</a></li>
+                        <li><a href="#" class="hover:text-blue-400">นโยบายความเป็นส่วนตัว</a></li>
+                        <li><a href="#" class="hover:text-blue-400">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <script>
+            let currentIndex = 0;
+            const slides = document.querySelectorAll("#carousel > div");
+            const indicators = document.querySelectorAll(".indicator");
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                if (index < 0) index = totalSlides - 1;
+                if (index >= totalSlides) index = 0;
+                currentIndex = index;
+                document.getElementById("carousel").style.transform = `translateX(-${index * 100}%)`;
+
+                // Update indicator active state
+                indicators.forEach((indicator, idx) => {
+                    if (idx === index) {
+                        indicator.classList.add('bg-opacity-100');
+                    } else {
+                        indicator.classList.remove('bg-opacity-100');
+                    }
+                });
+            }
+
+            function prevSlide() {
+                showSlide(currentIndex - 1);
+            }
+
+            function nextSlide() {
+                showSlide(currentIndex + 1);
+            }
+
+            // Automatically change slide every 5 seconds
+            setInterval(() => nextSlide(), 5000);
+        </script>
+    </body>
+
+</html>
