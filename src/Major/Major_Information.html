@@ -4,32 +4,101 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home | NVC</title>
+        <title>Major Information | NVC</title>
         <link href="../output.css" rel="stylesheet">
+        <style>
+            * {
+              font-family: "Kanit", serif;
+              font-weight: 400;
+              font-style: normal;
+            }
+          </style>
     </head>
 
     <body>
         <div class="min-h-screen flex flex-col">
             <!-- เมนูหลัก (Navbar) -->
             <nav class="shadow-lg p-0 sticky top-0 z-50">
-                <div class="bg-white container max-w-screen-xl mx-auto py-6">
-                <a href="../index.html" class="flex items-center">
-                    <img src="https://nc.ac.th/nvc/wp-content/uploads/2023/07/logo6.png" alt="วิทยาลัยอาชีวศึกษานครปฐม"
-                    class="h-16 w-auto" />
-                </a>
-                </div>
+                <div class="bg-white py-6">
+                    <a href="../index.html" class="flex container max-w-screen-xl mx-auto items-center">
+                        <img src="https://nc.ac.th/nvc/wp-content/uploads/2023/07/logo6.png" alt="วิทยาลัยอาชีวศึกษานครปฐม"
+                        class="h-16 w-auto" />
+                    </a>
+                    </div>
                 <div class="bg-blue-800 mx-auto flex justify-center">
                 <ul class="flex space-x-6 text-white py-4">
                     <li><a href="../index.html" class="hover:text-gray-400">หน้าแรก</a></li>
                     <li><a href="../Executive/Executive_information.html" class="hover:text-gray-400">ข้อมูลผู้บริหาร</a></li>
                     <li><a href="../Personnel/Personnel_information.html" class="hover:text-gray-400">ข้อมูลบุคลากร</a></li>
-                    <li><a href="../Student/" class="hover:text-gray-400">ข้อมูลนักเรียน</a></li>
+                    <li><a href="../Student/Student_information.html" class="hover:text-gray-400">ข้อมูลนักเรียน</a></li>
                     <li><a href="../Major/Major_Information.html" class="hover:text-gray-400">ข้อมูลสาขาวิชาที่เปิดสอน</a></li>
                 </ul>
                 </div>
             </nav>
             <!-- เนื้อหาหลัก -->
-            <div class="container mx-auto py-12">
+            <div class="p-4 mt-14 bg-white">
+    
+                <!-- Program List Section -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-gray-700">สาขาวิชาที่เปิดสอน</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                        <!-- ระดับชั้น ปวช. -->
+                        <div class="border border-blue-300 rounded-lg p-4">
+                            <h4 class="text-xl font-bold text-blue-600">ระดับชั้น ปวช. (ประกาศนียบัตรวิชาชีพ)</h4>
+                            <ul class="list-decimal pl-6 text-gray-800 leading-loose">
+                                <li>สาขาวิชาการบัญชี</li>
+                                <li>สาขาวิชาการตลาด</li>
+                                <li>สาขาวิชาการจัดการสำนักงานดิจิทัล</li>
+                                <li>สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล</li>
+                                <li>สาขาวิชาเทคโนโลยีสารสนเทศ</li>
+                                <li>สาขาวิชาแฟชั่นและสิ่งทอ</li>
+                                <li>สาขาวิชาอาหารและโภชนาการ</li>
+                                <li>สาขาวิชาคหกรรมศาสตร์</li>
+                                <li>สาขาวิชาดิจิทัลกราฟิก</li>
+                                <li>สาขาวิชาการออกแบบ</li>
+                                <li>สาขาวิชาการโรงแรม</li>
+                                <li>สาขาวิชาโลจิสติกส์</li>
+                                <li>สาขาวิชาธุรกิจค้าปลีกสมัยใหม่ <span class="px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded">ทวิภาคี</span></li>
+                                <li>สาขาวิชาภาษาต่างประเทศธุรกิจบริการ <span class="px-2 py-1 text-xs font-semibold text-white bg-red-500 rounded">NEW</span></li>
+                            </ul>
+                        </div>
+    
+                        <!-- ระดับชั้น ปวส. -->
+                        <div class="border border-blue-300 rounded-lg p-4">
+                            <h4 class="text-xl font-bold text-blue-600">ระดับชั้น ปวส. (ประกาศนียบัตรวิชาชีพชั้นสูง)</h4>
+                            <ul class="list-decimal pl-6 text-gray-800 leading-loose">
+                                <li>สาขาวิชาการบัญชี</li>
+                                <li>สาขาวิชาการตลาด <span class="px-2 py-1 text-xs font-semibold text-white bg-yellow-500 rounded">ปกติ</span> <span class="px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded">ทวิภาคี</span></li>
+                                <li>สาขาวิชาการจัดการสำนักงานดิจิทัล</li>
+                                <li>สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล <span class="px-2 py-1 text-xs font-semibold text-white bg-yellow-500 rounded">ปกติ</span> <span class="px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded">ทวิภาคี</span></li>
+                                <li>สาขาวิชาเทคโนโลยีสารสนเทศ <span class="px-2 py-1 text-xs font-semibold text-white bg-yellow-500 rounded">ปกติ</span> <span class="px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded">ทวิภาคี</span></li>
+                                <li>สาขาวิชาการบริหารงานคหกรรมศาสตร์</li>
+                                <li>สาขาวิชาเทคโนโลยีแฟชั่นและเครื่องแต่งกาย</li>
+                                <li>สาขาวิชาการออกแบบนิเทศศิลป์</li>
+                                <li>สาขาวิชาการจัดการธุรกิจค้าปลีก <span class="px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded">ทวิภาคี</span></li>
+                                <li>สาขาวิชาการจัดการโลจิสติกส์และซัพพลายเชน <span class="px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded">ทวิภาคี</span></li>
+                                <li>สาขาวิชาอาหารและโภชนาการ <span class="px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded">ทวิภาคี</span></li>
+                                <li>สาขาวิชาการโรงแรม <span class="px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded">ทวิภาคี</span></li>
+                                <li>สาขาวิชาดิจิทัลกราฟิก <span class="px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded">ทวิภาคี</span></li>
+                                <li>สาขาวิชาภาษาและการจัดการธุรกิจระหว่างประเทศ <span class="px-2 py-1 text-xs font-semibold text-white bg-red-500 rounded">NEW</span></li>
+                            </ul>
+                        </div>
+    
+                        <!-- ระดับชั้น ปริญญาตรี -->
+                        <div class="border border-blue-300 rounded-lg p-4">
+                            <h4 class="text-xl font-bold text-blue-600">ระดับชั้น ปริญญาตรี (สายเทคโนโลยีหรือปฏิบัติการ)</h4>
+                            <ul class="list-decimal pl-6 text-gray-800 leading-loose">
+                                <li>สาขาวิชาการบัญชี</li>
+                                <li>สาขาวิชาการจัดการโลจิสติกส์</li>
+                                <li>สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล</li>
+                                <li>สาขาวิชาเทคโนโลยีอาหารและโภชนาการ</li>
+                                <li>สาขาวิชาการโรงแรม</li>
+                                <li>สาขาวิชาดิจิทัลกราฟิก</li>
+                                <li>สาขาวิชาการจัดการธุรกิจค้าปลีก</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Footer -->
             <footer class="bg-blue-900 text-white py-6 mt-auto">
