@@ -20,29 +20,65 @@
       <!-- เมนูหลัก (Navbar) -->
       <nav class="shadow-lg p-0 sticky top-0 z-50">
         <div class="bg-white py-6">
-          <a href="../index.html" class="flex container max-w-screen-xl mx-auto items-center">
-            <img src="https://nc.ac.th/nvc/wp-content/uploads/2023/07/logo6.png" alt="วิทยาลัยอาชีวศึกษานครปฐม"
-              class="h-16 w-auto" />
-          </a>
+            <a href="../index.html" class="flex container max-w-screen-xl mx-auto items-center">
+                <img src="https://nc.ac.th/nvc/wp-content/uploads/2023/07/logo6.png"
+                    alt="วิทยาลัยอาชีวศึกษานครปฐม" class="h-16 w-auto" />
+            </a>
         </div>
+        <!-- เมนูสำหรับ Desktop และ Tablet -->
         <div class="bg-blue-800 mx-auto flex justify-center">
-          <ul class="flex space-x-6 text-white py-4">
-            <li><a href="../index.html" class=" hover:text-gray-400">หน้าแรก</a></li>
-            <li><a href="../Executive/Executive_information.html" class="hover:text-gray-400">ข้อมูลผู้บริหาร</a></li>
-            <li><a href="../Personnel/Personnel_information.html" class="hover:text-gray-400">ข้อมูลบุคลากร</a></li>
-            <li><a href="../Student/Student_information.html" class="hover:text-gray-400">ข้อมูลนักเรียน</a></li>
-            <li><a href="../Major/Major_Information.html" class="hover:text-gray-400">ข้อมูลสาขาวิชาที่เปิดสอน</a></li>
-          </ul>
+            <ul class="flex space-x-6 text-white py-4 hidden md:flex">
+                <li><a href="../index.html" class="hover:text-gray-400">หน้าแรก</a></li>
+                <li><a href="../Executive/Executive_information.html"
+                        class="hover:text-gray-400">ข้อมูลผู้บริหาร</a></li>
+                <li><a href="../Personnel/Personnel_information.html"
+                        class="hover:text-gray-400">ข้อมูลบุคลากร</a></li>
+                <li><a href="../Student/Student_information.html" class="hover:text-gray-400">ข้อมูลนักเรียน</a>
+                </li>
+                <li><a href="../Major/Major_Information.html"
+                        class="hover:text-gray-400">ข้อมูลสาขาวิชาที่เปิดสอน</a></li>
+            </ul>
         </div>
-      </nav>
+        <!-- ปุ่ม Hamburger สำหรับมือถือ -->
+        <div class="md:hidden flex justify-between items-center bg-blue-800 py-4 px-6">
+            <!-- เพิ่ม ml-auto เพื่อจัดตำแหน่งปุ่มไปทางขวา -->
+            <button id="hamburger"
+                class="relative w-8 h-5 flex flex-col justify-between items-center space-y-1 ml-auto">
+                <span class="block w-6 h-1 bg-white rounded transition-all transform"></span>
+                <span class="block w-6 h-1 bg-white rounded transition-all transform"></span>
+                <span class="block w-6 h-1 bg-white rounded transition-all transform"></span>
+            </button>
+        </div>
+        <!-- เมนูสำหรับมือถือ -->
+        <div id="mobileMenu"
+            class="bg-blue-900 text-white px-6 py-4 hidden transition-all duration-300 transform translate-x-full shadow-lg">
+            <ul class="space-y-6">
+                <li><a href="../index.html" class="block text-lg font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-gray-300 transition duration-300 ease-in-out">หน้าแรก</a></li>
+                <li><a href="../Executive/Executive_information.html" class="block text-lg font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-gray-300 transition duration-300 ease-in-out">ข้อมูลผู้บริหาร</a></li>
+                <li><a href="../Personnel/Personnel_information.html" class="block text-lg font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-gray-300 transition duration-300 ease-in-out">ข้อมูลบุคลากร</a></li>
+                <li><a href="../Student/Student_information.html" class="block text-lg font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-gray-300 transition duration-300 ease-in-out">ข้อมูลนักเรียน</a></li>
+                <li><a href="../Major/Major_Information.html" class="block text-lg font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-gray-300 transition duration-300 ease-in-out">ข้อมูลสาขาวิชาที่เปิดสอน</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        // เปิด/ปิดเมนู Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('translate-x-full');
+        });
+    </script>
       <!-- เนื้อหาหลัก -->
       <div class="container max-w-screen-lg mx-auto py-12">
         <!-- การ์ดที่มีรูปภาพและชื่อ -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- การ์ดที่ 1 -->
           <div
             class="bg-white rounded-lg shadow-lg overflow-hidden max-w-xs mx-auto transform transition-transform duration-300 hover:scale-105">
-            <img src="../../img/นุจรา.png" alt="การ์ด 1" class="w-full h-120 object-cover">
+            <img src="../../img/นุจรา.png" alt="การ์ด 1" class="w-full h-120  object-cover">
             <div class="p-6">
               <h3 class="text-xl font-semibold text-gray-700">นางนุจสรา โพธิ์เงิน</h3>
               <p class="text-gray-400">ครูชำนาญการ</p>
@@ -73,7 +109,7 @@
       <!-- Footer -->
       <footer class="bg-blue-900 text-white py-6 mt-auto">
         <div class="container mx-auto text-center">
-          <p class="text-sm">© 2023 วิทยาลัยอาชีวศึกษานครปฐม. สงวนลิขสิทธิ์.</p>
+          <p class="text-sm">© 2025 วิทยาลัยอาชีวศึกษานครปฐม. สงวนลิขสิทธิ์.</p>
           <ul class="flex justify-center space-x-6 mt-4">
             <li><a href="#" class="hover:text-blue-400">เกี่ยวกับเรา</a></li>
             <li><a href="#" class="hover:text-blue-400">นโยบายความเป็นส่วนตัว</a></li>
